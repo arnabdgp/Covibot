@@ -1,14 +1,14 @@
 #  https://basicdashflask.herokuapp.com/
-import flask
+from flask import *
 from dashboard.dash1 import create_dash1_application
 
-server = flask.Flask(__name__)
+server = Flask(__name__)
 
 create_dash1_application(server)
 
-@server.route('/')
+@server.route('/',methods=['GET'])
 def hello():
-    return flask.redirect('dash1')
+    return redirect('dash1')
 
 
 if __name__ == '__main__':
