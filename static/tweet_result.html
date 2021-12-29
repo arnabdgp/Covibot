@@ -1,222 +1,274 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  font-family: "Lato", sans-serif;
-}
-
-#mySearch {
-  width: 100%;
-  font-size: 18px;
-  padding: 11px;
-  border: 1px solid #ddd;
-}
-
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #04AA6D;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-}
-
-.openbtn:hover {
-  background-color: rgb(87, 243, 20);
-}
-
-.textcontent{
-  text-align: left;
-}
-
-/* input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
-  border: none;
-} */
-
-#submit_btn { 
-  /* float: right;  */
-  width: 100%;
-  padding: 6px;
-  margin-top: 8px;
-  /* margin-right: 16px; */
-  background: #ddd;
-  font-size: 17px;
-  border: none;
-  cursor: pointer;
-} 
-
-button:hover {
-  background: #ccc;
-}
-
-iframe {
-    display: block;       
-    background: #000;
-    border: none;         
-    height: 100vh;        
-    width: 100vw;
-}
-
-#main {
-  float: left;
-  transition: margin-left .5s;
-  padding: 10px;
-}
-
-.jumbotron{
-    /* text-align: center; */
-    width: 80%;
-}
-
-.container{
-    align-items: center;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-</style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-</head>
-<body>
-  <div id="navbar">
-    <div id="main">
-      <button id="main" class="openbtn" onclick="openNav()">☰</button>  
-    </div>
-    <!-- <div id="name">
-      <p style="text-align: center; font-size: 20px;">Covibot</p>
-    </div> -->
-  </div>
-
-  <header>
-
-  </header>
-
-<div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <div>
-    <form action="/form" method="post">
-      <input type="text" name="search_text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
-      <button type="submit" id="submitbtn">Search</button>
-    </form>
-  </div>
-    <a href="/" target="_blank">Home</a>
-  </ul>
-</div>
-<div class="container">
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-          <p class="lead">{{tweet1}}</p>
-        </div>
-      </div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-          <p class="lead">{{tweet2}}</p>
-        </div>
-      </div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-          <p class="lead">{{tweet3}}</p>
-        </div>
-      </div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-          <p class="lead">{{tweet4}}</p>
-        </div>
-      </div>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
-          <p class="lead">{{tweet5}}</p>
-        </div>
-      </div>
-
-</div>
-<footer>
-  
-</footer>
-
-<script>
-  function openNav() {
-    document.getElementById("mySidebar").style.width = "250px";
-    document.body.style.marginLeft = "250px";
-  }
-
-  function closeNav() {
-    document.getElementById("mySidebar").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    document.body.style.marginLeft = "0px";
-  }
-</script>
-   
-</body>
-</html> 
-
-
-
-<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1" />
+
+	<link
+	rel="stylesheet"
+	href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script>
+	<script src=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-map.min.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/geodata/custom/world/world.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
+
+    <style>
+        iframe {
+            display: block;       
+            background: #000;
+            border: none;         
+            height: 100vh;        
+            width: 100vw;
+        }
+        #container {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+    .jumbotron{
+    /* text-align: center; */
+        width: 100%;
+    }
+
+    .negative {
+      border: 2px solid red;
+    }
+
+    .positive {
+      border: 2px solid blue;
+    }
+
+    .neutral {
+      border: 2px solid green;
+    }
+
+    </style>
+   
 </head>
 <body>
-    <ul>
-        <li>{{tweet1}}</li>
-        <li>{{tweet2}}</li>
-        <li>{{tweet3}}</li>
-        <li>{{tweet4}}</li>
-        <li>{{tweet5}}</li>
-    </ul>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="#">Covibot</a>
+
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+			<a class="nav-link" href="/">Home</a>
+		</li>
+		<li class="nav-item active">
+			<a class="nav-link" href="https://www.cowin.gov.in/" target="_blank">CoWin</a>
+		</li>
+		<!-- <li class="nav-item">
+			<a class="nav-link" href="#">Job Portal</a>
+		</li> -->
+        <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Data Options
+            </a>
+            <div class="dropdown-menu">
+            <a class="dropdown-item" href="/total_cases" name="sample">Total cases</a>
+              <a class="dropdown-item" href="/new_cases" name="new_cases">New cases</a>
+              <a class="dropdown-item" href="/new_deaths" name="new_deaths">New deaths</a>
+              <a class="dropdown-item" href="/total_deaths" name="total_deaths">Total deaths</a>
+            </div>
+          </li>
+		</ul>
+        
+		<form class="form-inline my-2 my-lg-0" action="/news" method="post">
+      <input
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="Search for news"
+        name="search_news"
+        aria-label="Search"/>
+      <button class="btn btn-light my-2 my-sm-0"
+          type="submit" style="margin-right:20px ;">
+        Search
+      </button>
+      </form>
+
+		<form class="form-inline my-2 my-lg-0" action="/covid_news" method="post">
+		<input
+			class="form-control mr-sm-2"
+			type="text"
+			placeholder="Search for covid news"
+      name="search_covid_news"
+			aria-label="Search"/>
+		<button class="btn btn-light my-2 my-sm-0"
+				type="submit" style="margin-right:20px ;">
+			Search
+		</button>
+		</form>
+
+    <form class="form-inline my-2 my-lg-0" action="/tweets" method="post">
+      <input
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="Search for tweets"
+        name="search_text"
+        aria-label="Search"/>
+      <button class="btn btn-light my-2 my-sm-0"
+          type="submit">
+        Search
+      </button>
+      </form>
+	</div>
+	</nav>
+    <!-- <div>
+        <iframe src={{value}} frameborder="0"></iframe>
+    </div> -->
+    
+    <div class="container">
+        <br>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
+              <p>Name: {{names[0]}}</p>
+              <p>Username: {{usernames[0]}}</p>
+              <p>{{tweets[0]}}</p>
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[1]}}</p>
+              <p>Username: {{usernames[1]}}</p>
+              <p>{{tweets[1]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[2]}}</p>
+              <p>Username: {{usernames[2]}}</p>
+              <p>{{tweets[2]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[3]}}</p>
+              <p>Username: {{usernames[3]}}</p>
+              <p>{{tweets[3]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[4]}}</p>
+              <p>Username: {{usernames[4]}}</p>
+              <p>{{tweets[4]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[5]}}</p>
+              <p>Username: {{usernames[5]}}</p>
+              <p>{{tweets[5]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[6]}}</p>
+              <p>Username: {{usernames[6]}}</p>
+              <p>{{tweets[6]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[7]}}</p>
+              <p>Username: {{usernames[7]}}</p>
+              <p>{{tweets[7]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[8]}}</p>
+              <p>Username: {{usernames[8]}}</p>
+              <p>{{tweets[8]}}</p>
+              
+            </div>
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <p>Name: {{names[9]}}</p>
+              <p>Username: {{usernames[9]}}</p>
+              <p>{{tweets[9]}}</p>
+            
+            </div>
+          </div>
+    </div>
+    
+    <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+  
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
 </body>
-</html> -->
+</html>
