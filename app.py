@@ -139,16 +139,16 @@ def tweets_searchbar():
     names = []
     usernames = []
     response = client.search_recent_tweets(query=query,max_results=100,tweet_fields=['created_at','lang'],expansions='author_id')
-    for i in range(len(response.data)):
+    for i in range(min(len(response.includes['users']),len(response.data))):
         if response.data[i].lang == 'en':
             text = response.data[i].text
-            if(text[0:2]=='RT'):
-                idx = text.find(':')
-                text = text[idx+1:]
+            # if(text[0:2]=='RT'):
+            #     idx = text.find(':')
+            #     text = text[idx+1:]
             tweets.append(text)
-            # names.append(response.includes['users'][i].name)
-            # usernames.append(response.includes['users'][i].username)
-    return render_template('tweet_result.html',tweets=tweets)
+            names.append(response.includes['users'][i].name)
+            usernames.append(response.includes['users'][i].username)
+    return render_template('tweet_result.html',tweets=tweets,names=names,usernames=usernames)
 
 
 if __name__ == '__main__':
