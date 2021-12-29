@@ -26,6 +26,13 @@
     <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-data-adapter.min.js"></script>
 
     <style>
+
+        body{
+          background-image: url("Blue-Coronavirus.jpg");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
         iframe {
             display: block;       
             background: #000;
@@ -41,7 +48,9 @@
     }
     .jumbotron{
     /* text-align: center; */
+      border-radius: 20px;
         width: 100%;
+
     }
 
     .negative {
@@ -50,10 +59,24 @@
 
     .positive {
       border: 2px solid blue;
+      color: blue;
     }
 
     .neutral {
       border: 2px solid green;
+      color: green;
+    }
+
+    .negative1{
+      color: red;
+    }
+
+    .positive1 {
+      color: blue;
+    }    
+
+    .neutral1 {
+      color: green;
     }
 
     </style>
@@ -137,105 +160,115 @@
             <div class="container">
               <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
               <hr class="{{senti[0]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[0]['title']}}</p>
-              <p class="lead">{{arr[0]['description']}}</p>
-              <p>Published on : {{arr[0]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[0]['url']}}" target="_blank">{{arr[1]['url']}}</a>
-              <p>Sentiments: {{senti[0]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[0]['title']}}</p>
+              <p style="font-size: 22px;" class="lead">{{arr[0]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[0]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[0]['url']}}" target="_blank">{{arr[1]['url']}}</a>
+              <br>
+              <p class = "{{senti[0]}}1" style="font-size: 20px;">Sentiments: {{senti[0]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[1]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[1]['title']}}</p>
-              <p class="lead">{{arr[1]['description']}}</p>
-              <p>Published on : {{arr[1]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[1]['url']}}" target="_blank">{{arr[1]['url']}}</a>
-              <p>Sentiments: {{senti[1]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[1]['title']}}</p>
+              <p class="lead" style="font-size: 22px;">{{arr[1]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[1]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[1]['url']}}" target="_blank">{{arr[1]['url']}}</a>
+              <br>
+              <p class = "{{senti[1]}}1" style="font-size: 20px;">Sentiments: {{senti[1]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[2]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[2]['title']}}</p>
-              <p class="lead">{{arr[2]['description']}}</p>
-              <p>Published on : {{arr[2]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[2]['url']}}" target="_blank">{{arr[2]['title']}}</a>
-              <p>Sentiments: {{senti[2]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[2]['title']}}</p>
+              <p class="lead" style="font-size: 22px;">{{arr[2]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[2]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[2]['url']}}" target="_blank">{{arr[2]['title']}}</a>
+              <br>
+              <p class = "{{senti[2]}}1" style="font-size: 20px;">Sentiments: {{senti[2]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[3]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[3]['title']}}</p>
-              <p class="lead">{{arr[3]['description']}}</p>
-              <p>Published on : {{arr[3]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[3]['url']}}" target="_blank">{{arr[3]['url']}}</a>
-              <p>Sentiments: {{senti[3]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[3]['title']}}</p>
+              <p class="lead" style="font-size: 22px;">{{arr[3]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[3]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[3]['url']}}" target="_blank">{{arr[3]['url']}}</a>
+              <br>
+              <p class = "{{senti[3]}}1" style="font-size: 20px;">Sentiments: {{senti[3]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[4]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[4]['title']}}</p>
-              <p class="lead">{{arr[4]['description']}}</p>
-              <p>Published on : {{arr[4]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[4]['url']}}" target="_blank">{{arr[4]['url']}}</a>
-              <p>Sentiments: {{senti[4]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[4]['title']}}</p>
+              <p class="lead" style="font-size: 22px;">{{arr[4]['description']}}</p>
+              <p  style="font-size: 20px;">Published on : {{arr[4]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[4]['url']}}" target="_blank">{{arr[4]['url']}}</a>
+              <br>
+              <p class = "{{senti[4]}}1" style="font-size: 20px;">Sentiments: {{senti[4]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[5]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[5]['title']}}</p>
-              <p class="lead">{{arr[5]['description']}}</p>
-              <p>Published on : {{arr[5]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[5]['url']}}" target="_blank">{{arr[5]['url']}}</a>
-              <p>Sentiments: {{senti[5]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[5]['title']}}</p>
+              <p style="font-size: 22px;" class="lead">{{arr[5]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[5]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[5]['url']}}" target="_blank">{{arr[5]['url']}}</a>
+              <br>
+              <p class = "{{senti[5]}}1" style="font-size: 20px;">Sentiments: {{senti[5]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[6]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[6]['title']}}</p>
-              <p class="lead">{{arr[6]['description']}}</p>
-              <p>Published on : {{arr[6]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[6]['url']}}" target="_blank">{{arr[6]['url']}}</a>
-              <p>Sentiments: {{senti[6]}}</p>
+              <p class="lead" style="font-weight: bold;font-size: 24px;">{{arr[6]['title']}}</p>
+              <p class="lead" style="font-size: 22px;">{{arr[6]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[6]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[6]['url']}}" target="_blank">{{arr[6]['url']}}</a>
+              <br>
+              <p class = "{{senti[6]}}1" style="font-size: 20px;">Sentiments: {{senti[6]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[7]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[7]['title']}}</p>
-              <p class="lead">{{arr[7]['description']}}</p>
-              <p>Published on : {{arr[7]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[6]['url']}}" target="_blank">{{arr[7]['url']}}</a>
-              <p>Sentiments: {{senti[7]}}</p>
+              <p style="font-size: 24px;" class="lead" style="font-weight: bold;">{{arr[7]['title']}}</p>
+              <p style="font-size: 22px;" class="lead">{{arr[7]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[7]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[6]['url']}}" target="_blank">{{arr[7]['url']}}</a>
+              <br>
+              <p class = "{{senti[7]}}1" style="font-size: 20px;">Sentiments: {{senti[7]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[8]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[8]['title']}}</p>
-              <p class="lead">{{arr[8]['description']}}</p>
-              <p>Published on : {{arr[8]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[8]['url']}}" target="_blank">{{arr[8]['url']}}</a>
-              <p>Sentiments: {{senti[8]}}</p>
+              <p style="font-size: 24px;" class="lead" style="font-weight: bold;">{{arr[8]['title']}}</p>
+              <p style="font-size: 22px;" class="lead">{{arr[8]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[8]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[8]['url']}}" target="_blank">{{arr[8]['url']}}</a>
+              <br>
+              <p class = "{{senti[8]}}1" style="font-size: 20px;">Sentiments: {{senti[8]}}</p>
             </div>
           </div>
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
               <hr class="{{senti[9]}}">
-              <p class="lead" style="font-weight: bold;">{{arr[9]['title']}}</p>
-              <p class="lead">{{arr[9]['description']}}</p>
-              <p>Published on : {{arr[9]['publishedAt'][0:10]}}</p>
-              <a href="{{arr[9]['url']}}" target="_blank">{{arr[9]['url']}}</a>
-              <p>Sentiments: {{senti[9]}}</p>
+              <p style="font-size: 24px;" class="lead" style="font-weight: bold;">{{arr[9]['title']}}</p>
+              <p style="font-size: 22px;" class="lead">{{arr[9]['description']}}</p>
+              <p style="font-size: 20px;">Published on : {{arr[9]['publishedAt'][0:10]}}</p>
+              <a style="font-size: 20px;" href="{{arr[9]['url']}}" target="_blank">{{arr[9]['url']}}</a>
+              <br>
+              <p class = "{{senti[9]}}1" style="font-size: 20px;">Sentiments: {{senti[9]}}</p>
             </div>
           </div>
-    </div>
-    
+        </div>
+        
     <!-- Footer -->
 <footer class="bg-dark text-center text-white">
     <!-- Grid container -->
