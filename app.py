@@ -146,9 +146,9 @@ def tweets_searchbar():
                 idx = text.find(':')
                 text = text[idx+1:]
             tweets.append(text)
-            names.append(response.includes['users'][i].name)
+            # names.append(response.includes['users'][i].name)
             usernames.append(response.includes['users'][i].username)
-    return render_template('tweet_result.html',tweets=tweets,usernames=usernames,names=names)
+    return render_template('tweet_result.html',tweets=tweets,usernames=usernames)
 
 
 if __name__ == '__main__':
