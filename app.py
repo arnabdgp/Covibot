@@ -25,11 +25,11 @@ def new_page_option2():
 
 @server.route('/new_deaths',methods=['GET'])
 def new_page_option3():
-    return render_template('new_death.html')
+    return render_template('new_deaths.html')
 
 @server.route('/total_deaths',methods=['GET'])
 def new_page_option4():
-    return render_template('total_deaths.html')
+    return render_template('total_death.html')
 
 @server.route('/news',methods=['POST'])
 def newssearch():
