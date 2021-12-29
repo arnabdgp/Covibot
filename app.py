@@ -2,31 +2,31 @@
 from flask import *
 # import torch
 # from transformers import BertTokenizer, BertModel
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 # Load pre-trained model tokenizer (vocabulary)
 # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
-import pandas as pd
-import numpy as np
-import re
-import string
+# import pandas as pd
+# import numpy as np
+# import re
+# import string
 import requests     
-import json
-import tensorflow as tf
-import tensorflow_hub as hub
-import numpy as np
+# import json
+# import tensorflow as tf
+# import tensorflow_hub as hub
+# import numpy as np
 # import nltk
 # nltk.download('punkt')
 # nltk.download('brown')
-from nltk.tokenize import word_tokenize
+# from nltk.tokenize import word_tokenize
 from textblob import TextBlob
-import numpy as np
+# import numpy as np
 # from scipy.spatial.distance import cosine
 # from sentence_transformers import SentenceTransformer
-from dashboard.sentiment import create_sentiment_application
+# from dashboard.sentiment import create_sentiment_application
 
 server = Flask(__name__, template_folder='static')
 
-create_sentiment_application(server)
+# create_sentiment_application(server)
 
 # df=pd.read_csv('covid19_tweets.csv')
 # df=df.rename(columns={'text':'tweet'})
