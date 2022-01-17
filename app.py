@@ -12,6 +12,10 @@ def hello():
     return redirect('sentiment')
 
 @server.route('/',methods=['GET'])
+def landing_page():
+    return render_template('index.html')
+
+@server.route('/India_details',methods=['GET'])
 def hello_html():
     return render_template('mapmyindia.html')
 
