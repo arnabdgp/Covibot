@@ -23,7 +23,7 @@
         </style>
   
         <!--put your map api javascript url with key here-->
-               <script src="https://apis.mapmyindia.com/advancedmaps/v1/73847a3e-3f70-4d31-9501-eeb07a039401/map_load?v=1.5&plugins=coronaLayers&callback=init"></script>
+               <script src="https://apis.mapmyindia.com/advancedmaps/v1/cfdb5eb2-f043-435a-8508-bdb19c08c5fc/map_load?v=1.5&plugins=coronaLayers&callback=init"></script>
         
       
     </head>
@@ -63,11 +63,11 @@
          var inf=document.getElementById('info').value;
          var info=true; if(inf) info=inf;
          var exp=document.getElementById('expand').value;
-         var expand=false; if(exp) expand=exp;
+         var expand=true; if(expand) expand=exp;
           var scon=document.getElementById('control').value;
          var control=true; if(scon) control=scon;
      
-        new MapmyIndia.covidLayer({map:map,position:pos,showControl:control,infocallback1:infocall,defaultLayer:'state_corona_stats',expand:expand,multiple:multiple,info:info});
+        new MapmyIndia.covidLayer({map:map,position:pos,showControl:control,infocallback1:infocall,defaultLayer:'state_corona_stats',expand:true,multiple:multiple,info:info});
         
         function infocall(data)
         {
